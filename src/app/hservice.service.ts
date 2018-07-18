@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 // import {Observable} from 'rxjs/Observable';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Rate } from './app.component';
 import { Observable } from 'rxjs';
+import { Post } from './List/list/list.component';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class HserviceService {
   constructor(private http: HttpClient) { }
 
   getPosts() {
-    return this.http.get<Rate>('https://rest.coinapi.io/v1/exchangerate/BTC', {headers : this.headers1});
+    return this.http.get<Post>('https://rest.coinapi.io/v1/exchangerate/BTC', {headers : this.headers1});
   }
 }
 

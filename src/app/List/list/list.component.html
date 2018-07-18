@@ -1,0 +1,38 @@
+<ul class="list-group abc">
+    <li (click)="getAll()" class="list-group-item">Kurs</li>
+    <li class="list-group-item">Transakcje</li>
+    <li class="list-group-item">Przewidywania</li>
+    <li class="list-group-item">Partnerzy</li>
+    <li class="list-group-item">Czat</li>
+  </ul>
+<div class="abc" style="width: 50%">
+  <p>
+      Lorem ipsum dolor sit amet, consectetur adip . Pr . Nam vel nulla mi. Phasellus malesuada vestibulum ultrices. Suspendisse potenti. Nunc nec mattis orci.
+  </p>
+
+  <hr>
+  <p>
+      Nulla porta ligula sed orci sodales tristique. In congue fringilla est.
+  </p>
+</div>
+
+
+<div class="abc">
+    <table class="table table-hover">
+        <tr>
+           <th>
+               Waluta
+             </th>
+             <th>
+               Kurs
+             </th>
+        </tr>
+         <tr *ngFor="let p of posts$">
+           <td>
+               {{p.asset_id_quote}}
+           </td>
+           <td>
+               {{p.rate}}
+           </td>
+         </tr>
+       </table>
